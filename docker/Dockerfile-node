@@ -8,8 +8,10 @@ WORKDIR /app
 # Install dependencies
 COPY package*.json .
 RUN npm install
+RUN npm install webpack-dev-server --save-dev
 
 # Exports
 EXPOSE 3000
 
-CMD [ "npm", "start" ]
+# CMD [ "npm", "run", "test" ]
+CMD ["npm", "start"]
